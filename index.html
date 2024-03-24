@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          103deg,
+          rgba(255, 255, 255, 1) 47%,
+          rgba(245, 245, 245, 1) 100%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 30px;
+        background-color: lightgray;
+        animation: slide-in 1s ease-out;
+      }
+
+      .username-input {
+        border: none;
+        border-bottom: 2px solid black;
+        width: 200px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .username-input:focus {
+        outline: none;
+        border-color: black;
+      }
+
+      .login-icon {
+        margin-bottom: 20px;
+        animation: slide-in-left 1s ease-out;
+      }
+
+      .login-button {
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        animation: slide-in-right 1s ease-out;
+      }
+
+      .login-button:hover {
+        background-color: #333;
+      }
+
+      @keyframes slide-in {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slide-in-left {
+        0% {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slide-in-right {
+        0% {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-form">
+      <img
+        class="login-icon"
+        src="https://cdn-icons-png.flaticon.com/512/1151/1151397.png"
+        width="50"
+        alt=""
+      />
+      <input
+        class="username-input"
+        type="text"
+        name="username"
+        placeholder="Username"
+      />
+      <button class="login-button" onclick="location.href='admin-panel2.html';">
+        Login
+      </button>
+    </div>
+  </body>
+</html>
